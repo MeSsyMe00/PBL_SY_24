@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>College Comparison</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+<section id="homepage">
+    <header>
+        <div class="container">
+            <h1>College Comparison</h1>
+            <p>Welcome to the College Comparison tool. Compare colleges based on your CET score and make informed decisions about your education.</p>
+            <p>Contact us at: example@example.com</p>
+            <button id="nextButton">Next</button>
+        </div>
+    </header>
+
+    <footer>
+        <div class="container">
+            <h3>College Quotes</h3>
+            <blockquote>
+                "Education is the most powerful weapon which you can use to change the world." - Nelson Mandela
+            </blockquote>
+            <blockquote>
+                "The only person who is educated is the one who has learned how to learn... and change." - Carl Rogers
+            </blockquote>
+            <p>For more information and assistance, feel free to contact us at: example@example.com</p>
+        </div>
+    </footer>
+</section>
+
+<section id="tool" style="display: none;">
+    <div class="container">
+        <h2>College Comparison Tool</h2>
+        <p>This tool allows you to enter your CET score and find out which colleges are the best match for you based on their CET score cutoffs.</p>
+        <form onsubmit="compareColleges(); return false;">
+            <label for="cetScore">Enter your CET Score:</label>
+            <input type="number" id="cetScore" name="cetScore" required>
+            <button type="submit">Compare Colleges</button>
+        </form>
+        <div class="comparison">
+            <div class="college" id="college1">
+                <h3>College 1</h3>
+                <p>Information 1</p>
+            </div>
+            <div class="college" id="college2">
+                <h3>College 2</h3>
+                <p>Information 2</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

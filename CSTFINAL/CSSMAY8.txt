@@ -1,0 +1,90 @@
+body {
+    background-color: #ffffff;
+    color: #007bff;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+}
+
+header {
+    background-color: #28a745; /* Green */
+    color: #ffffff; /* White text */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+footer {
+    background-color: #f8f9fa; /* Light gray */
+    color: #000000; /* Black text */
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+#tool {
+    display: none; /* Hide comparison tool by default */
+    margin-top: 20px;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+input[type="number"] {
+    width: 100px;
+    padding: 8px;
+    border: 1px solid #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+.comparison {
+    display: flex;
+    justify-content: space-between; /* Changed to space-between */
+    gap: 20px; /* Added gap */
+}
+
+.college {
+    flex: 1; /* Added flex property */
+    background-color: #28a745; /* Green */
+    color: #ffffff; /* White text */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Added transition for smoother hover effect */
+}
+
+.college:hover {
+    transform: translateY(-5px); /* Added hover effect */
+}
+
+.college h3 {
+    margin-top: 0;
+}
+
+.college p {
+    margin-bottom: 0;
+}

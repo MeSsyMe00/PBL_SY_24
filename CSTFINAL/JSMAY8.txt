@@ -1,0 +1,46 @@
+// Define the colleges with their respective CET score cutoffs and information
+const colleges = [
+    { name: "College A", cetScoreCutoff: 80, info: "College A is known for its excellent faculty and state-of-the-art facilities." },
+    { name: "College B", cetScoreCutoff: 75, info: "College B offers a wide range of extracurricular activities and has a strong alumni network." },
+    { name: "College C", cetScoreCutoff: 85, info: "College C provides opportunities for research and internships with leading companies." },
+    { name: "College D", cetScoreCutoff: 70, info: "College D focuses on practical learning and industry exposure." },
+    { name: "College E", cetScoreCutoff: 90, info: "College E has a rigorous academic curriculum and emphasizes on holistic development." },
+    { name: "College F", cetScoreCutoff: 65, info: "College F offers specialized programs and mentorship opportunities."},
+    { name: "College G", cetScoreCutoff: 95, info: "College G is renowned for its cutting-edge research facilities and global collaborations."},
+    { name: "College H", cetScoreCutoff: 60, info: "College H provides scholarships and financial aid to deserving students."},
+    { name: "College I", cetScoreCutoff: 100, info: "College I is highly selective and offers a personalized learning experience."}
+    // Add more colleges as needed
+];
+
+// Function to compare colleges based on the entered CET score
+function compareColleges() {
+    const cetScore = parseInt(document.getElementById('cetScore').value);
+    const chosenColleges = chooseColleges(cetScore);
+    displayCollegeInfo(chosenColleges);
+}
+
+// Function to determine the best two colleges based on CET score
+function chooseColleges(cetScore) {
+    // Filter colleges with cutoff scores less than or equal to the input score
+    const eligibleColleges = colleges.filter(college => college.cetScoreCutoff <= cetScore);
+    // Sort eligible colleges based on their cutoff scores in descending order
+    const sortedColleges = eligibleColleges.sort((a, b) => b.cetScoreCutoff - a.cetScoreCutoff);
+    // Return only the top two colleges for comparison
+    return sortedColleges.slice(0, 2);
+}
+
+// Function to display information about the chosen colleges
+function displayCollegeInfo(colleges) {
+    const college1 = document.getElementById('college1');
+    const college2 = document.getElementById('college2');
+    college1.innerHTML = `<h3>${colleges[0].name}</h3><p>${colleges[0].info}</p>`;
+    college2.innerHTML = `<h3>${colleges[1].name}</h3><p>${colleges[1].info}</p>`;
+}
+
+// Function to switch between homepage and comparison tool
+document.getElementById('nextButton').addEventListener('click', function() {
+    const homepage = document.getElementById('homepage');
+    const tool = document.getElementById('tool');
+    homepage.style.display = 'none';
+    tool.style.display = 'block';
+});
